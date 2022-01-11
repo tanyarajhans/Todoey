@@ -15,12 +15,7 @@ class TaskScreen extends StatelessWidget {
         showModalBottomSheet(
           context: context,
           builder: (context) => 
-           AddTaskScreen((newTaskTitle){
-            // setState(() {
-            //   Provider.of<TaskData>(context).tasks.add(Task(name: newTaskTitle));
-            // });
-            Navigator.pop(context);
-          }),
+           AddTaskScreen(),
         );
       }, backgroundColor: Colors.lightBlueAccent, child: Icon(Icons.add),),
       body: Column(
@@ -38,7 +33,7 @@ class TaskScreen extends StatelessWidget {
               ),
               SizedBox(height: 10.0),
               Text('Todoey', style: TextStyle(color: Colors.white, fontSize: 50.0, fontWeight: FontWeight.w400)),
-              Text('${Provider.of<TaskData>(context).tasks.length} tasks', style: TextStyle(color: Colors.white, fontSize: 18.0))
+              Text('${Provider.of<TaskData>(context).taskCount} tasks', style: TextStyle(color: Colors.white, fontSize: 18.0))
             ],
           ),
         ),
