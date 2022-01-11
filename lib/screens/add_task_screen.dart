@@ -24,7 +24,7 @@ class AddTaskScreen extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           TextButton(onPressed: (){
-
+            
           }, child: Text('Add', ))
         ],)
       )
